@@ -13,38 +13,38 @@ export function App() {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <div className="p-4 md:p-6 max-w-4xl mx-auto space-y-4 text-gray-200">
-        <h1 className="text-2xl md:text-3xl font-bold">Produtos</h1>
+        <h1 className="text-2xl md:text-3xl font-bold">Products</h1>
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <form className="flex flex-col md:flex-row items-center gap-2 w-full md:w-auto">
-            <Input name="id" placeholder="ID do produto" className="w-full md:w-auto bg-gray-700 text-gray-200 border-gray-600" />
-            <Input name="name" placeholder="Nome do produto" className="w-full md:w-auto bg-gray-700 text-gray-200 border-gray-600" />
-            <Button type="submit" variant="outline" className="bg-gray-700 text-gray-200 border-gray-600 w-full md:w-auto">Filtrar<Search className="w-3 h-3 ml-2" /></Button>
+            <Input name="id" placeholder="Product ID" className="w-full md:w-auto bg-gray-700 text-gray-200 border-gray-600" />
+            <Input name="name" placeholder="Product Name" className="w-full md:w-auto bg-gray-700 text-gray-200 border-gray-600" />
+            <Button type="submit" variant="outline" className="bg-gray-700 text-gray-200 border-gray-600 w-full md:w-auto">Filter<Search className="w-3 h-3 ml-2" /></Button>
           </form>
 
           <Dialog>
             <DialogTrigger asChild>
-              <Button className="bg-blue-600 text-white w-full md:w-auto"><PlusCircle className="mr-2 w-5 h-5" />Novo Produto </Button>
+              <Button className="bg-blue-600 text-white w-full md:w-auto"><PlusCircle className="mr-2 w-5 h-5" />New Product </Button>
             </DialogTrigger>
 
             <DialogContent className="bg-gray-800 text-gray-200">
               <DialogHeader>
-                <DialogTitle>Novo produto</DialogTitle>
-                <DialogDescription>Adicionar um produto ao sistema</DialogDescription>
+                <DialogTitle>New product</DialogTitle>
+                <DialogDescription>Add a product to the system</DialogDescription>
               </DialogHeader>
               <form className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-4 items-center text-right gap-3">
-                  <Label htmlFor="name">Nome</Label>
+                  <Label htmlFor="name">Name</Label>
                   <Input className="md:col-span-3 bg-gray-700 text-gray-200 border-gray-600" id="name" />
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-4 items-center text-right gap-3">
-                  <Label htmlFor="price">Preço</Label>
+                  <Label htmlFor="price">Price</Label>
                   <Input className="md:col-span-3 bg-gray-700 text-gray-200 border-gray-600" id="price" />
                 </div>
                 <DialogFooter>
                   <DialogClose asChild>
-                    <Button type="button" variant="outline" className="bg-gray-700 text-gray-200 border-gray-600 w-full md:w-auto">Cancelar</Button>
+                    <Button type="button" variant="outline" className="bg-gray-700 text-gray-200 border-gray-600 w-full md:w-auto">Cancel</Button>
                   </DialogClose>
-                  <Button type="submit" className="bg-blue-600 text-white w-full md:w-auto">Salvar</Button>
+                  <Button type="submit" className="bg-blue-600 text-white w-full md:w-auto">Save</Button>
                 </DialogFooter>
               </form>
             </DialogContent>
@@ -55,8 +55,8 @@ export function App() {
             <TableHeader>
               <TableRow>
                 <TableHead>ID</TableHead>
-                <TableHead>Produto</TableHead>
-                <TableHead>Preço</TableHead>
+                <TableHead>Product</TableHead>
+                <TableHead>Price</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -64,8 +64,8 @@ export function App() {
                 return (
                   <TableRow key={i} className="border-b border-gray-700">
                     <TableCell>#0000{i}</TableCell>
-                    <TableCell>Produto 0{i}</TableCell>
-                    <TableCell>R$: 129,99</TableCell>
+                    <TableCell>Product 0{i}</TableCell>
+                    <TableCell>$129.99</TableCell>
                   </TableRow>
                 )
               })}
